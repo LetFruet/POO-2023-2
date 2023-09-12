@@ -3,10 +3,10 @@ package Unidade02.Exe02;
 public class Computador {
 
     private int numeroSerial;
-    private double capaciadeHD;
-    private double memoria;
+    private int capaciadeHD;
+    private int memoria;
 
-    public Computador(int numeroSerial, double capaciadeHD, double memoria) {
+    public Computador(int numeroSerial, int capaciadeHD, int memoria) {
         setNumeroSerial(numeroSerial);
         setCapaciadeHD(capaciadeHD);
         setMemoria(memoria);
@@ -20,19 +20,19 @@ public class Computador {
         this.numeroSerial = numeroSerial;
     }
 
-    public double getCapaciadeHD() {
+    public int getCapaciadeHD() {
         return capaciadeHD;
     }
 
-    public void setCapaciadeHD(double capaciadeHD) {
+    public void setCapaciadeHD(int capaciadeHD) {
         this.capaciadeHD = capaciadeHD;
     }
 
-    public double getMemoria() {
+    public int getMemoria() {
         return memoria;
     }
 
-    public void setMemoria(double memoria) {
+    public void setMemoria(int memoria) {
         this.memoria = memoria;
     } 
 

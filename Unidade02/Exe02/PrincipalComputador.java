@@ -17,6 +17,7 @@ public class PrincipalComputador {
 
     private void adicionaComputador(ArrayList<Computador> lista, Computador computador) {
 
+        //lista recebe computadores e computadores aponta pra um endereço de memória X
         lista.add(computador);
     }
 

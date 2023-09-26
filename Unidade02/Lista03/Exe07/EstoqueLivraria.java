@@ -1,4 +1,4 @@
-package Unidade02.Lista01.Exe07;
+package Unidade02.Lista03.Exe07;
 import java.util.HashMap;
 public class EstoqueLivraria {
 

@@ -1,4 +1,4 @@
-package Unidade02.Lista01.Exe07;
+package Unidade02.Lista03.Exe07;
 public class TesteLivraria {
 	
     public static void main(String[] args) {
@@ -12,7 +12,6 @@ public class TesteLivraria {
 		Livro l1 = new Livro("Título A", "Autor A", "ISBN A", 10, 15);
 		Livro l2 = new Livro("Título B", "Autor B", "ISBN B", 10, 15);
 		Livro l3 = new Livro("Título C", "Autor C", "ISBN C", 10, 15);
-		Livro l4 = new Livro("Título D", "Autor D", "ISBN D", 10, 15);
 		
 		System.out.println(estoqueLivraria.compraDeLivros(l1));
 		System.out.println(estoqueLivraria.compraDeLivros(l2));

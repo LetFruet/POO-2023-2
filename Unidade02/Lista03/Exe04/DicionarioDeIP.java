@@ -2,7 +2,7 @@
  * @author Letícia Fruet
  */
 
-package Unidade02.Lista01.Exe04;
+package Unidade02.Lista03.Exe04;
 import java.util.HashMap;
 import java.util.Scanner;
 public class DicionarioDeIP {
@@ -53,6 +53,7 @@ public class DicionarioDeIP {
 			nome = kb.next();
 		}
 
+		kb.close();
 	}
 
 	private String imprimirSite(HashMap<String, Site> sites) {
@@ -72,11 +73,12 @@ public class DicionarioDeIP {
 		return "Site bloqueado";
 	}
 
-	private boolean inserirSite(Site site, HashMap sites) {
+	private boolean inserirSite(Site site, HashMap<String, Site> sites) {
 		if (sites.containsKey(site.getNomeSite())) {
 			return false;
+		} else {
+			sites.put(site.getNomeSite(), site);
+			return true;
 		}
-		sites.put(site.getNomeSite(), site);
-		    return true;
 	}
 }

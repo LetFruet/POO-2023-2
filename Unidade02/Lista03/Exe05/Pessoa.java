@@ -1,4 +1,4 @@
-package Unidade02.Lista01.Exe05;
+package Unidade02.Lista03.Exe05;
 public class Pessoa {
     
     private String nome;

@@ -1,4 +1,4 @@
-package Unidade02.Lista01.Exe06;
+package Unidade02.Lista03.Exe06;
 import java.util.ArrayList;
 public class Pessoa {
    

@@ -1,4 +1,4 @@
-package Unidade02.Lista01.Exe06;
+package Unidade02.Lista03.Exe06;
 public class Endereco {
     
     private String logradouro; //quando o atributo é público, não consigo fazer a validação

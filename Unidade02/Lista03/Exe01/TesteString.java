@@ -3,7 +3,7 @@ a) Dentro do main, crie 10 variáveis do tipo String com nomes de times de futeb
 b) Armazene estas strings em um ArrayList; 
 c) Remova o elemento que está na SEXTA (6) posição do ArrayList; 
 d) Utilize o método get() para obter cada um dos elementos do ArrayList, imprimindo-os na tela.*/
-package Unidade02.Lista01.Exe01;
+package Unidade02.Lista03.Exe01;
 import java.util.ArrayList;
 public class TesteString {
     

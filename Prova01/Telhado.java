@@ -53,9 +53,7 @@ public class Telhado {
 
         if (sobreposicao > 0) {
             areaTotal -= sobreposicao;
-        } else {
-            areaTotal = areaTotal;
-        }
+        } 
 
         return areaTotal;
     }

@@ -1,3 +1,12 @@
+/*Imagine que você foi convidado para realizar uma avaliação de conhecimentos em POO para trabalhar em uma grande empresa Nacional. 
+Este teste era decisivo para sua possível contratação. Quando você chegou ao local de realização da prova você viu que existiam vários 
+concorrentes, contudo, quando você leu a avaliação lembrou de tudo que aprendeu na FURB sobre POO. A prova não era muito complicada 
+e tinha a seguinte questão: 
+a) O que você tem em mãos é uma representação do tipo prova. Cada prova é composta por alguns atributos, dentre eles: 
+o concorrente e o valor na nota. Cada entidade do tipo concorrente tem os seguintes atributos: nome do concorrente, 
+área de especialização, número de inscrição, telefone para contato e endereço. 
+Crie um programa que leia os dados de 5 provas apresentando os dados de cada concorrente e sua respectiva nota. 
+Apresentando na tela na seqüência que foi lida.  */
 package Unidade02.Lista04.Exe01;
 public class Concorrente {
     

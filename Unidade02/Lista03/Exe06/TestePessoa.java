@@ -7,15 +7,15 @@ public class TestePessoa {
 	
 	public TestePessoa() {
         Pessoa p1 = new Pessoa("Leticia");
+        Endereco e2 = new Endereco("Rua A");
+        Endereco e1 = new Endereco("Rua B");
 
-        p1.addEndereco(new Endereco("Rua Antônio da Veiga"));
-        
-        Endereco e1 = new Endereco("Rua Des. Pedro Silva");
-        e1.setNumero(78);
+        p1.addEndereco(new Endereco("Rua C"));
+    
+        e1.setNumero(123);
         p1.addEndereco(e1);
 
-        Endereco e2 = new Endereco("Rua Benjamin Fruet");
-        e2.setNumero(153);
+        e2.setNumero(456);
         e2.setComplemento("Casa");
         p1.addEndereco(e2);
 	

@@ -7,11 +7,12 @@ public class Paises {
     
     private String nomePais; 
     private double dimensaoPais;
-    public static List<Paises> listaPaises = new ArrayList<>();
+    public static List<Paises> listaPaises = new ArrayList<>(); //chama a partir da classe continente
 
     public Paises(String nomePais, double dimensaoPais) {
         setNomePais(nomePais);
         setDimensaoPais(dimensaoPais);
+        listaPaises.add(this);
     }
 
     public String getNomePais() {
@@ -36,19 +37,10 @@ public class Paises {
         this.dimensaoPais = dimensaoPais;
     } 
 
-    public String calcularDimensaoContinente() {
-        
-        double somaArea = 0;
-        for (Paises p : listaPaises) {
-            somaArea += p.getDimensaoPais();
-        }
-        return "A dimensão territorial do contininente é de " + somaArea + " Km²";
-    }
-
     @Override
     public String toString() {
 
-        return "Nome do país: " + getNomePais() + "\tDimensão: " + getDimensaoPais();
+        return "País: " + getNomePais() + "\tDimensão: " + getDimensaoPais();
         
     }
 }

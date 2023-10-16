@@ -21,14 +21,14 @@ public class Vereador {
     
     private String nomeVereador, nomePartido;
     private int numeroPartido, projetosApresentados, projetosAprovados;
-    public static List<Vereador> listaParlamentares = new ArrayList<>();
+    public static List<Vereador> listaVereadores = new ArrayList<>();
 
     public Vereador(String nomeVereador, String nomePartido, int numeroPartido, int projetosApresentados, int projetosAprovados) {
         setNomeVereador(nomeVereador);
         setNomePartido(nomePartido);
         setProjetosApresentados(projetosApresentados);
         setProjetosAprovados(projetosAprovados);
-        listaParlamentares.add(this);
+        listaVereadores.add(this);
     }
 
     public String getNome() {
@@ -86,7 +86,7 @@ public class Vereador {
         this.projetosAprovados = projetosAprovados;
     }
 
-    public double calcularDesempenho() { //verificar desempenho
+    public double calcularDesempenho() { 
 
         double indiceDeTrabalho = 0;
 
@@ -104,7 +104,6 @@ public class Vereador {
             indiceDeTrabalho = 1.22;
         }
         
-
         //forçando uma das variáveis a ser um double para obter um resultado decimal, caso getProjetosAprovados() 
         //for menor que getProjetosApresentados() para que a divisão não resulte em zero
         return ((double)getProjetosAprovados() / getProjetosApresentados()) * indiceDeTrabalho;
@@ -114,13 +113,13 @@ public class Vereador {
         int somaProjetos = 0;
         somaProjetos += getProjetosApresentados() + getProjetosAprovados();
 
-        return "Total de projetos apresentados e aprovados na câmara pelo vereador " + getNome() + " é " + somaProjetos;
+        return " - O total de projetos apresentados e aprovados na câmara pelo vereador " + getNome() + " é " + somaProjetos;
     }
 
     @Override
     public String toString() {
 
         return " - Vereador: " + getNome() + "\t|  Nome do partido: " + getNomePartido() + "  \t|  Número do partido: " + 
-                getNumeroPartido() + "  \t|  Desemprenho: " + calcularDesempenho();
+                getNumeroPartido() + "  \t|  Desemprenho: " + calcularDesempenho() + "\n";
     }
 }

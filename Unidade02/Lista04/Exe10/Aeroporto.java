@@ -6,7 +6,7 @@ public class Aeroporto {
     private String codigoAeroporto; 
     private String nomeAeroporto;
     private boolean internacional;
-    private List<Aviao> listaAvioes;
+    private List<Aviao> listaAvioes = new ArrayList<>();
     public static List<Aeroporto> listaAeroportos = new ArrayList<>();
     public static List<Aeroporto> listaPartida = new ArrayList<>();
     public static List<Aeroporto> listaChegada = new ArrayList<>();
@@ -15,8 +15,7 @@ public class Aeroporto {
         setCodigoAeroporto(codigoAeroporto);
         setNomeAeroporto(nomeAeroporto);
         setInternacional(internacional);
-        this.listaChegada = new ArrayList<>();
-        this.listaPartida = new ArrayList<>();
+        listaAeroportos.add(this);
     }
 
     public String getCodigoAeroporto() {
@@ -82,12 +81,53 @@ public class Aeroporto {
         }
         return false;
     }
-}
 
-/*
-d) Um método que receba um prefixo de avião como parâmetro e informe se a aeronave está pousada nele 
-e) Um método que receba um outro aeroporto como parâmetro e verifique se existe alguma forma de se chegar nele. Para isto, o aeroporto 
-deve verificar se ele possui vôo partindo para o aeroporto desejado, e caso não saia, se existe alguma forma de chegar nele à partir 
-dos aeroportos de onde sai − public boolean possuiRota(Aeroporto aeroporto) 
-Obs.: A quantidade máxima de aeronaves que um aeroporto pode ter em terra é igual a 100 e a quantidade 
-máxima de outros aeroportos com os quais o aeroporto pode ter linhas saindo e chegando é 100. */ 
+    public boolean aeronavePousada(String prefixo) {
+        for (Aviao a : listaAvioes) {
+            if (a.getNomeModelo().equals(prefixo)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean possuiRota(Aeroporto aeroporto) {
+        if (listaPartida.contains(aeroporto)) {
+            return true;
+        }
+        for (Aeroporto a : listaPartida) {
+            if (a.possuiRota(aeroporto)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean aviaoComPrefixo(String prefixo) {
+        for (Aviao a : listaAvioes) {
+            if (a.verificarPrefixo().equals(prefixo)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void adicionarAviao(Aviao novoAviao) {
+        listaAvioes.add(novoAviao);
+    }
+
+    public void adicionarPartida(Aeroporto novaPartida) {
+        listaPartida.add(novaPartida);
+    }
+
+    @Override
+    public String toString() {
+
+        String str = "Aeroporto: " + getNomeAeroporto() + "\nCódigo: " + getCodigoAeroporto();
+
+        if (isInternacional()) {
+            str += "\nInternacional";
+        }
+        return str;
+    }
+}

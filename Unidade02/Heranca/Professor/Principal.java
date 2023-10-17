@@ -1,5 +1,6 @@
 package Unidade02.Heranca.Professor;
-
+import java.util.ArrayList;
+import java.util.List;
 public class Principal {
     
     public static void main(String[] args) {
@@ -13,5 +14,25 @@ public class Principal {
         System.out.println(umProfDE);
         System.out.println("----------");
         System.out.println(umProfHorista);
+        System.out.println("----------");
+
+        List<Professor> listaProfessores = new ArrayList<>();
+
+        listaProfessores.add(umProfessor);
+        listaProfessores.add(umProfDE);
+        listaProfessores.add(umProfHorista);
+
+        for (Professor umProf : listaProfessores) {
+            if (umProf instanceof ProfDE) { //verificando se umProf é do tipo profDE
+                ProfDE ProfessorDE = (ProfDE)umProf; //convertendo o objeto professorDE para o tipo profDE
+                System.out.println(ProfessorDE.getSalario()); //chamando o método get salário do dado professorDE
+                System.out.println("----------");
+            }
+            if (umProf instanceof ProfHorista) { //verificando se umProf é do tipo profHorista
+                ProfHorista ProfessorHorista = (ProfHorista)umProf; //convertendo o objeto professorDE para o tipo profHorista
+                System.out.println(ProfessorHorista.calcularSalario()); //chamando o método get salário do dado profHorista
+                System.out.println("----------");
+            }
+        }
     }
 }

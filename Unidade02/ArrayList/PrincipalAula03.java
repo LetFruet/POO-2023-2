@@ -1,4 +1,4 @@
-package Unidade02.Aula03;
+package Unidade02.ArrayList;
 import java.util.ArrayList;
 import java.util.Scanner;
 

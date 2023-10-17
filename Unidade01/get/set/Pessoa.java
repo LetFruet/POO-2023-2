@@ -1,4 +1,4 @@
-package Unidade01.Aula01;
+package Unidade01.get.set;
 public class Pessoa{
     
     // definindo os atributos (características)

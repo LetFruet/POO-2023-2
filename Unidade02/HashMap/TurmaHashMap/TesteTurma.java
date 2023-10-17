@@ -1,4 +1,4 @@
-package Unidade02.Aula04.TurmaHashMap;
+package Unidade02.HashMap.TurmaHashMap;
 public class TesteTurma {
 	
 	public static void main(String[] args) {

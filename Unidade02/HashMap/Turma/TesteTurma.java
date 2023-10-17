@@ -1,4 +1,4 @@
-package Unidade02.Aula04.Turma;
+package Unidade02.HashMap.Turma;
 public class TesteTurma {
 
     public TesteTurma(){

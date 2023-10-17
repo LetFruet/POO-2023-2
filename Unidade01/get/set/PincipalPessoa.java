@@ -1,4 +1,4 @@
-package Unidade01.Aula01;
+package Unidade01.get.set;
 public class PincipalPessoa {
 
     public static void main(String[] args) {

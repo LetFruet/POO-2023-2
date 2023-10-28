@@ -13,13 +13,14 @@ public class AlunoGraduacao extends Aluno {
     }
 
     public void setSemestre(int semestre) throws IllegalArgumentException {
-        if(semestre < 1){
+        if(semestre < 1) {
             throw new IllegalArgumentException("Semestre inválido");
         }
         this.semestre = semestre;
     }
 
+    @Override //indica que o método vem da classe pai e está sendo sobrescrito
     public String exibirDados() {
-        return super.toString() + "\nSemestre: " + getSemestre();
+        return "Nome: " + this.getNome() + "\nCurso: " + this.getCurso() + "\nSemestre: " + this.getSemestre(); //this.getNome(): o this serve para ter certeza que o nome é dessa classe
     }
 }

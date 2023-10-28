@@ -1,6 +1,6 @@
 package Unidade02.Lista05.Exe01;
 
-public class Aluno {
+public abstract class Aluno {
    
     private String nome;
     private String curso;
@@ -29,7 +29,5 @@ public class Aluno {
         this.curso = curso;
     }
 
-    public String toString() {
-        return "Nome: " + getNome() + "\nCurso: " + getCurso();
-    }
+    public abstract String exibirDados();
 }

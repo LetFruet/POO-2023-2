@@ -20,7 +20,8 @@ public class AlunoPos extends Aluno {
         this.pontosPoscomp = pontosPoscomp;
     }
 
+    @Override
     public String exibirDados(){
-        return super.toString() + "\nPontos: " + getPontosPoscomp();
+        return super.toString() + "\nPontos: " + this.getPontosPoscomp();
     }
 }

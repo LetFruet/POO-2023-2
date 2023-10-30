@@ -1,3 +1,5 @@
+// LETÍCIA FRUET
+
 package Trabalho02;
 import javax.swing.JOptionPane;
 public class Jogo {

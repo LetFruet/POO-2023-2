@@ -1,3 +1,5 @@
+// LETÍCIA FRUET
+
 package Trabalho02;
 public class Confronto {
 

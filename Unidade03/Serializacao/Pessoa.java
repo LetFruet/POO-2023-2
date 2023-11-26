@@ -1,7 +1,7 @@
 package Unidade03.Serializacao;
 import java.io.Serializable;
-
-public  class Pessoa implements Serializable{
+//implementando a serialização a classe Pessoa
+public class Pessoa implements Serializable {
 
     private String nome;
     private int idade;
@@ -15,11 +15,11 @@ public  class Pessoa implements Serializable{
         this.nome = nome;
     }
 
-    public String getNome(){
+    public String getNome() {
         return this.nome;
     }
 
-    public void setIdade(int idade){
+    public void setIdade(int idade) {
         if (idade >= 0 && idade <= 150) {
             this.idade = idade;
         } else {
@@ -27,7 +27,7 @@ public  class Pessoa implements Serializable{
         } 
     }
 
-    public int getIdade(){
+    public int getIdade() {
         return this.idade;
     }
 

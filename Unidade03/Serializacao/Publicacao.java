@@ -1,7 +1,7 @@
 package Unidade03.Serializacao;
 import java.io.Serializable;
-
-public class Publicacao implements Serializable {
+//implementando a serialização a classe Publicacao
+public class Publicacao implements Serializable { 
 
     private String nome;
     private String editora;

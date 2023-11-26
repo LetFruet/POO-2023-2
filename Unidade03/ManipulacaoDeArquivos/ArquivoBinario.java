@@ -4,37 +4,41 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 public class ArquivoBinario {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        //definindo diretorio e nome de arquivo a ser criado e gravado
+
+        //definindo o diretorio e o nome a ser criado e gravado
+        //criando um arquivo de texto (txt)
         File f = new File("C:\\Users\\Leticia\\teste.txt");
-        //criando arquivo a permitir que seja gravado algo
-        FileOutputStream  fos = new FileOutputStream(f);
+        //criando arquivo de saída (que permite que algo seja gravado)
+        FileOutputStream fosGravar = new FileOutputStream(f);
         
         //gravando algo no arquivo
-        fos.write(90);
-        fos.write(100);
-        fos.write(200);
-        fos.write(400);
-        fos.write(1000);
+        fosGravar.write(90);
+        fosGravar.write(100);
+        fosGravar.write(200);
+        fosGravar.write(400);
+        fosGravar.write(1000);
         
-        //fechando o arquivo
-        fos.close();
+        //fechando o arquivo com as gravações já armazenadas nele
+        fosGravar.close();
         
         //abrindo o arquivo para realizar a leitura das informações
-        FileInputStream fis = new FileInputStream(f);
+        FileInputStream fisLeitura = new FileInputStream(f);
         
         int dado;
-        //loop para ler o arquivo
+
+        //criando loop para ler todos os dados do arquivo criado
         while(true) {
-            //lendo cada byte
-            dado = fis.read();
+            //lendo cada byte do artigo
+            dado = fisLeitura.read();
 
             //verificando se não chegou ao final do arquivo
+            //caso não tenha terminado, ele continuará a ler o arquivo
             if (dado != -1 ) {                
                 System.out.println(dado);
+            //se o arquivo terminou, o programa encerra
             } else {
                 break;
             }

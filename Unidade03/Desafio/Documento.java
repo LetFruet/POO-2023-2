@@ -1,3 +1,19 @@
+/*Exercício de arquivo texto:
+
+Faça um método que crie o documento texto:
+1) Solicite ao usuário qual será o nome do arquivo e a extensão.
+2) Crie um arquivo texto na pasta raiz de seu projeto.
+
+Faça um método que escreva no documento de texto:
+1) Solicite ao usuário que entre com dados para escrever no arquivo ou digite "FIM" para parar a escrita
+2) Persista os dados no documento
+
+Faça um método que leia o arquivo de texto:
+1) Solicite o nome do arquivo a ser lido
+2) Imprima o texto lido em um bloco de texto na Console
+
+DESAFIO:
+- Pergunte se desja substituir o arquivo caso já exista e siga com a vontade do usuário */
 package Unidade03.Desafio;
 import java.io.File;
 import java.io.FileNotFoundException;

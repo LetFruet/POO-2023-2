@@ -36,7 +36,7 @@ public class ArquivoBinario {
 
             //verificando se não chegou ao final do arquivo
             //caso não tenha terminado, ele continuará a ler o arquivo
-            if (dado != -1 ) {                
+            if (dado != -1) { //o read() retorna -1 quando não houver mais dados no arquivo       
                 System.out.println(dado);
             //se o arquivo terminou, o programa encerra
             } else {

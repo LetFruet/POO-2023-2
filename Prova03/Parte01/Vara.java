@@ -1,9 +1,7 @@
-package Prova03Parte01.Parte01;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class Vara {
+
     private String tipoVara;
     private List<Processo> listaProcessos;
 
@@ -46,5 +44,4 @@ public class Vara {
         }
         return str;
     }
-    
 }

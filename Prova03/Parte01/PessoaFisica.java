@@ -1,5 +1,3 @@
-package Prova03Parte01.Parte01;
-
 public class PessoaFisica extends Pessoa {
 
     private String cpf;

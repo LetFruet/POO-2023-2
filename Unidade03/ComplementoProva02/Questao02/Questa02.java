@@ -15,7 +15,7 @@ public class Questa02 {
     
     public static void main(String[] args) throws IOException {
 
-        ///definindo o arquivo a ser lido
+        //definindo o arquivo a ser lido
         FileInputStream fis = new FileInputStream("D:\\Documents\\Faculdade\\2º sem\\POO-2023-2\\Unidade03\\ComplementoProva02\\suicidio.csv"); 
         //lendo o arquivo definido 
         InputStreamReader isr = new InputStreamReader(fis); 

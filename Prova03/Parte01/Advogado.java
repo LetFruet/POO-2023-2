@@ -1,5 +1,3 @@
-package Prova03Parte01.Parte01;
-
 public class Advogado extends Usuario {
     
     private String registroOab;

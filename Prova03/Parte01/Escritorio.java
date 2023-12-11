@@ -1,8 +1,5 @@
-package Prova03Parte01.Parte01;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class Escritorio {
     
     private List<Secretaria> listaSecretarias = new ArrayList<Secretaria>();

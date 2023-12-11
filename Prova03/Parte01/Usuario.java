@@ -1,5 +1,3 @@
-package Prova03Parte01.Parte01;
-
 public abstract class Usuario {
     
     private String login;

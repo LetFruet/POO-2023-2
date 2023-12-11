@@ -1,49 +1,38 @@
-package Prova03Parte01.Parte01;
-
 import java.time.LocalDate;
-
 public class Audiencia {
-    
-    private LocalDate dataAudiencia;
-    private String recomendacaoTribunal;
-    private Tribunal umTribunal;
 
-    public Audiencia(LocalDate dataAudiencia, String recomendacaoTribunal, Tribunal umTribunal) {
-        setDataAudiencia(dataAudiencia);
-        setRecomendacaoTribunal(recomendacaoTribunal);
-        setUmTribunal(umTribunal);
-    }
+	private LocalDate dataAudiencia;
+	private String recomendacaoTribunal;
 
-    public LocalDate getDataAudiencia() {
-        return dataAudiencia;
-    }
+	public Audiencia(LocalDate dataAudiencia, String recomendacaoTribunal) {
+		setDataAudiencia(dataAudiencia);
+		setRecomendacaoTribunal(recomendacaoTribunal);
+	}
 
-    public void setDataAudiencia(LocalDate dataAudiencia) throws IllegalArgumentException {
-        if (dataAudiencia == null || dataAudiencia.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("Data da audiência inválida");
-        }
-        this.dataAudiencia = dataAudiencia;
-    }
+	public LocalDate getDataAudiencia() {
+		return dataAudiencia;
+	}
 
-    public String getRecomendacaoTribunal() {
-        return recomendacaoTribunal;
-    }
+	public void setDataAudiencia(LocalDate dataAudiencia) throws IllegalArgumentException {
+		if (dataAudiencia == null || dataAudiencia.isAfter(LocalDate.now())) {
+			throw new IllegalArgumentException("Data da audiência inválida");
+		}
+		this.dataAudiencia = dataAudiencia;
+	}
 
-    public void setRecomendacaoTribunal(String recomendacaoTribunal) throws IllegalArgumentException {
-        if (recomendacaoTribunal == null || recomendacaoTribunal.trim().isEmpty()) {
-            throw new IllegalArgumentException("Recomendação do tribunal inválida");
-        }
-        this.recomendacaoTribunal = recomendacaoTribunal;
-    }
+	public String getRecomendacaoTribunal() {
+		return recomendacaoTribunal;
+	}
 
-    public Tribunal getUmTribunal() {
-        return umTribunal;
-    }
+	public void setRecomendacaoTribunal(String recomendacaoTribunal) throws IllegalArgumentException {
+		if (recomendacaoTribunal == null || recomendacaoTribunal.trim().isEmpty()) {
+			throw new IllegalArgumentException("Recomendação do tribunal inválida");
+		}
+		this.recomendacaoTribunal = recomendacaoTribunal;
+	}
 
-    public void setUmTribunal(Tribunal umTribunal) throws IllegalArgumentException {
-        if (umTribunal == null) {
-            throw new IllegalArgumentException("Tribunal inválido");
-        }
-        this.umTribunal = umTribunal;
-    }    
+	@Override
+	public String toString() {
+		return "Data: " + getDataAudiencia() + "Recomendação: " + getRecomendacaoTribunal();
+	}
 }
